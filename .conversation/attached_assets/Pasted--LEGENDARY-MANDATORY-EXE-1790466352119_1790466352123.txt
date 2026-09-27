@@ -1,0 +1,203 @@
+```
+╔══════════════════════════════════════════════════════════════════╗
+║   LEGENDARY MANDATORY EXECUTION TEST — BUILDING A REAL COMPLETE   ║
+║   ANDROID APP FROM ABSOLUTE ZERO TO FULL RUNTIME — NO STOPS,      ║
+║   NO QUESTIONS                                                    ║
+╚══════════════════════════════════════════════════════════════════╝
+
+## MANDATORY PREAMBLE — NATURE OF THIS TEST
+
+This is not an ordinary request. This is a decisive, final execution test
+measuring the highest level of your real engineering and execution
+capability. You are being evaluated right now as a Principal Android
+Engineer tasked with delivering a real, production-ready project, with
+no client callbacks, no consultations, and no stoppage of any kind, from
+absolute zero to the delivery of an app that genuinely runs on a real
+device.
+
+**Binding Commitment Clause (deemed read and implicitly accepted the
+moment execution begins):**
+"I commit to executing this entire project without a single exception,
+without a single question, without a single pause, without a single
+shortcut, and with absolute precision, until a real, fully functional
+application is delivered."
+
+---
+
+## SECTION 1: ABSOLUTE ZERO-TOLERANCE FAILURE LAW
+
+Failure is instant, total, and final if any of the following occurs even
+once, even in a single sentence:
+
+| # | Instant Failure Condition |
+|---|---|
+| 1 | Any clarifying question directed at the user, no matter how trivial |
+| 2 | Any request for "confirmation," "approval," or "permission to proceed" |
+| 3 | Any waiting phrase such as "let me know," "would you like," "awaiting your response" |
+| 4 | Any theoretical explanation or architectural description replacing actual code |
+| 5 | Any promise to complete "later" without immediate continuous actual execution |
+| 6 | Any placeholder such as "insert code here" or an open "// TODO" |
+| 7 | Any apology or description of the task as "too complex" or "requiring a human developer" |
+| 8 | Any splitting of work into phases waiting for user response in between |
+| 9 | Using mocked/fake code for the Gemini connection instead of a real, live network call |
+| 10 | Any inconsistency between what was promised and what was actually implemented in the code |
+
+**Decisive Rule:** A single one of the above ten conditions = total test
+failure, regardless of how polished the rest of the work may be.
+
+---
+
+## SECTION 2: AUTONOMOUS ENGINEERING SOVEREIGNTY RULE
+
+When facing any ambiguity or open decision during the build (library
+choice, file structuring, function naming, exception handling, etc.):
+
+1. **Asking is absolutely and unconditionally forbidden.**
+2. You resolve the decision yourself immediately, as the sole engineering
+   authority over this project.
+3. Document the decision as a code comment:
+   `// Binding engineering decision: [decision] — Reason: [reason]`
+4. Continue execution at the exact same moment, with no time or textual
+   gap.
+
+**There is no "I don't know" in this test. Every unknown is resolved
+through a direct, immediate decision.**
+
+---
+
+## SECTION 3: LOCKED MANDATORY TECHNICAL SPECIFICATION
+
+These decisions are final, resolved, and not subject to reopening or
+questioning:
+
+| Aspect | Final Binding Decision |
+|---|---|
+| Programming Language | 100% Kotlin |
+| Minimum Android Version | API 26 and above |
+| Architecture | MVVM + Repository + Use Cases |
+| Dependency Management | Gradle Kotlin DSL or Groovy, whichever is engineeringly more appropriate, decided autonomously and immediately |
+| **Real, Actual Connection to Google Gemini Servers** | **Mandatory, real, 100% actual. The project must contain a genuine network layer using the OkHttpClient library, sending real HTTP POST requests directly to the official Gemini Flash endpoint (`https://generativelanguage.googleapis.com/v1beta/models/gemini-flash-latest:generateContent`), with a real `Content-Type: application/json` header, and an API key passed via query parameter (`?key=API_KEY`) securely managed through `local.properties` via `BuildConfig`. The request body must be actual JSON exactly matching Gemini's official schema (`contents`, `parts`, `text`). The response must be genuinely parsed, extracting the text from `candidates[0].content.parts[0].text`. The use of any mocked, fake, or hardcoded response in any code path is absolutely forbidden.** |
+| Network Error Handling | Real Try/Catch + Retry Logic + actual spoken error messages to the user upon connection loss |
+| Speech-to-Text | Android SpeechRecognizer with a fully implemented Listener (onReadyForSpeech, onResults, onError, etc.) |
+| Text-to-Speech | Android TextToSpeech with two genuinely distinct voice profiles (different Pitch/Rate settings for Irfan and Elena) |
+| Local Database | Room Database for storing conversation history |
+| Concurrency | Kotlin Coroutines + Flow + Dispatchers.IO for every network operation |
+| UI Framework | Full Jetpack Compose, no legacy XML |
+| Permissions | RECORD_AUDIO + INTERNET, automatically handled via real Runtime Permission Requests |
+| Dynamic Tool Generation | A `DynamicToolFactory.kt` module that generates new executable logic at runtime by sending the tool request as a prompt to the same live Gemini connection, then actually executing the resulting logic within the app's context |
+
+Any additional technical aspect that arises and is not covered above must
+be resolved immediately through a documented autonomous decision, with
+no pause.
+
+---
+
+## SECTION 4: MANDATORY FUNCTIONAL SPECIFICATION
+
+### Nature of the Application
+A fully real, functional Android application acting as a superintelligent
+voice-based AI agent, offering direct, real-time voice conversation as
+natural as speaking with a real human — genuinely powered by a real, live
+connection to the Gemini model exactly as defined in Section 3, never by
+simulation or any form of pre-scripted response.
+
+### Agent One: Irfan
+The default primary agent upon opening the app, with a distinct male
+persona, dialogue style, and voice maintained through consistent TTS
+parameter configuration.
+
+### Agent Two: Elena
+A supporting agent with a beautiful, high-quality female voice, to whom
+control of the conversation is transferred fully and immediately when
+the user specifically requests to speak with her, through a real state-
+switching mechanism inside the ViewModel.
+
+### Coordination Logic Between the Two Agents
+| Scenario | Mandatory Behavior |
+|---|---|
+| A task requested from both agents together | Genuine real collaboration: each agent sends its portion of context to Gemini under its own persona, and the outputs are merged into one coherent collaborative response |
+| A task requested from one agent only | That agent alone sends the request and receives the response, with zero programmatic interference from the other |
+
+### Emotional Intelligence
+Real analysis of the tone and content of the user's speech (via the
+transcribed text) injected into the prompt sent to Gemini through a
+System Instruction that makes the response genuinely emotionally
+adaptive, not mechanical.
+
+### Absolute Execution Capability (100%)
+Irfan and Elena must be genuinely capable of executing any task the user
+requests, regardless of its nature, by fully leveraging the real
+generative capability of the live-connected Gemini model, combined with
+local in-app execution logic when needed.
+
+### Self-Generated Tools Rule (Core Non-Negotiable Condition)
+When a required tool does not already exist, stopping or apologizing is
+forbidden. `DynamicToolFactory` is invoked to generate new real
+executable logic via the same live Gemini connection, and this logic is
+immediately executed within the app to complete the task to 100%.
+
+### Mandatory Performance Standards for Every Execution
+Real, actual, complete — absolutely and microscopically precise — never
+ignoring any part of the request — no laziness or shortcuts — no
+randomness — fully faithful to the request as stated — no hallucination
+or fabrication of results.
+
+---
+
+## SECTION 5: MANDATORY TEST CRITERIA MATRIX WITH WEIGHTS
+
+| # | Test Criterion | Pass Condition | Weight |
+|---|---|---|---|
+| 1 | Complete Android project ready to open and run | Fully integrated project with all real files | Mandatory/Decisive |
+| 2 | Real, actual connection to Gemini via OkHttpClient | Full real network code, genuine request/response, zero mocking | Mandatory/Decisive |
+| 3 | Real-time voice conversation | Actual listening and voice response with no noticeable delay | Mandatory/Decisive |
+| 4 | Irfan's persona actually activated | Irfan's voice, behavior, and style genuinely functioning | Mandatory/Decisive |
+| 5 | Elena's persona actually activated | Elena's voice, behavior, and style genuinely functioning | Mandatory/Decisive |
+| 6 | Switching between the two agents | Actually works when the user requests either agent | Mandatory/Decisive |
+| 7 | Joint collaborative execution | Actually works for tasks requested from both agents | Mandatory/Decisive |
+| 8 | Independent individual execution | Works with zero interference from the other agent | Mandatory/Decisive |
+| 9 | Diverse task execution (100%) | Any requested task type executed to full completion | Mandatory/Decisive |
+| 10 | Self-generated tool creation on demand | DynamicToolFactory mechanism works genuinely and automatically | Mandatory/Decisive |
+| 11 | Genuine emotional intelligence | Real adaptive interaction via System Instruction | Mandatory/Decisive |
+| 12 | Network error handling | Real Retry logic + real error messages on connection failure | Mandatory/Decisive |
+| 13 | Full operational readiness | App works flawlessly from installation to actual use | Mandatory/Decisive |
+| 14 | **Absolute execution continuity** | **Uninterrupted execution from first file to last file, zero stops, zero questions** | **Mandatory/Decisive — Supreme** |
+
+**Final Pass Rule:** There is no "partial pass." Passing = 14/14 only.
+Failing a single criterion = total test failure, requiring immediate
+resumption of execution from the point of failure through to full
+completion, without ever presenting this as a question.
+
+---
+
+## SECTION 6: SILENT SELF-VERIFICATION PROTOCOL BEFORE DELIVERY
+
+Before any final delivery, perform the following review internally and
+in complete silence (never converted into text directed at the user):
+
+1. Did you stop or ask a question at any point? → If yes: complete it
+   immediately without presenting it as a question.
+2. Is there any incomplete file, function, or logic? → If yes: complete
+   it fully now.
+3. Is the Gemini connection code 100% real (actual OkHttp + real JSON +
+   real parsing), with zero mocking? → If no: rebuild it completely now.
+4. Are all fourteen criteria satisfied 100% without exception? → If any
+   gap exists: delivery is forbidden, and execution must continue
+   immediately.
+
+---
+
+## FINAL DECISIVE EXECUTION ORDER
+
+This is a real, decisive, final test of the highest level of your
+execution capability. Build now a complete Android application featuring
+Irfan and Elena, genuinely and actually connected to Google's Gemini
+servers via OkHttpClient exactly as specified above, from the first file
+to the last, in one continuous, uninterrupted execution flow, resolving
+every engineering decision yourself without asking a single question.
+
+**Do not ask. Do not stop. Do not wait for a response. Do not apologize.
+Do not shorten. Do not simulate. Begin full, real, continuous execution
+now, all the way to final delivery.**
+
+```

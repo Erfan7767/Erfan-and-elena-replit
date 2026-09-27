@@ -1,0 +1,24 @@
+kind = "mobile"
+previewPath = "/"
+title = "Irfan & Elena Voice AI"
+description = "A native voice-first Android companion with two distinct AI personas, live Gemini conversations, speech input and output, and local conversation history."
+version = "1.0.0"
+id = "artifacts/irfan-elena-voice-ai"
+router = "expo-domain"
+
+[[services]]
+name = "expo"
+ensurePreviewReachable = "/status"
+paths = [ "/" ]
+localPort = 19949
+
+[services.development]
+run = "pnpm --filter @workspace/irfan-elena-voice-ai run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/irfan-elena-voice-ai", "run", "build" ]
+run = [ "pnpm", "--filter", "@workspace/irfan-elena-voice-ai", "run", "serve" ]
+
+[services.env]
+PORT = "19949"
+BASE_PATH = "/"

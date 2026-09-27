@@ -1,0 +1,2 @@
+- [Gemini secret boundary](gemini-secret-boundary.md) — Keep Gemini requests behind the API server; never expose provider keys through EXPO_PUBLIC variables.
+- [Native speech preview](native-speech-preview.md) — expo-speech-recognition requires a native Android development/standalone build; Expo Go uses the web speech path.

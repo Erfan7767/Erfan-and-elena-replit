@@ -1,0 +1,107 @@
+openapi: 3.1.0
+info:
+  # Do not change the title, if the title changes, the import paths will be broken
+  title: Api
+  version: 0.1.0
+  description: API specification
+servers:
+  - url: /api
+    description: Base API path
+tags:
+  - name: health
+    description: Health operations
+  - name: gemini
+    description: Live Gemini conversation operations
+paths:
+  /healthz:
+    get:
+      operationId: healthCheck
+      tags: [health]
+      summary: Health check
+      description: Returns server health status
+      responses:
+        "200":
+          description: Healthy
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/HealthStatus"
+  /gemini/chat:
+    post:
+      operationId: sendGeminiChat
+      tags: [gemini]
+      summary: Send a message to the live Gemini voice companion
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/GeminiChatRequest"
+      responses:
+        "200":
+          description: Gemini response
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/GeminiChatResponse"
+        "400":
+          description: Invalid request
+        "502":
+          description: Gemini connection failure
+components:
+  schemas:
+    HealthStatus:
+      type: object
+      properties:
+        status:
+          type: string
+      required:
+        - status
+    GeminiChatMessage:
+      type: object
+      properties:
+        role:
+          type: string
+          enum: [user, model]
+        text:
+          type: string
+      required: [role, text]
+    GeminiChatRequest:
+      type: object
+      properties:
+        message:
+          type: string
+        mode:
+          type: string
+          enum: [irfan, elena, together]
+        agents:
+          type: array
+          items:
+            type: string
+            enum: [irfan, elena]
+        history:
+          type: array
+          items:
+            $ref: "#/components/schemas/GeminiChatMessage"
+        systemInstruction:
+          type: string
+      required: [message]
+    GeminiChatResponse:
+      type: object
+      properties:
+        text:
+          type: string
+        agent:
+          type: string
+          enum: [irfan, elena]
+        collaboration:
+          type: boolean
+        contributors:
+          type: array
+          items:
+            type: string
+            enum: [irfan, elena]
+        degraded:
+          type: string
+      required: [text, agent, collaboration]
+
